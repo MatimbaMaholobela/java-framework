@@ -12,6 +12,7 @@ public class ForkJoin extends RecursiveAction
 		static final int SEQUENTIAL_CUTOFF = 10000;
 
 		 int lo; int hi;
+		 static float[] medianArray;
 
 		ForkJoin(float [] a, int w, int l, int h)
 		{ arr = a; width = w; lo=l; hi=h;}
@@ -34,7 +35,7 @@ public class ForkJoin extends RecursiveAction
 
 		public void filter(){
 
-		        //float[] filtered = new float[arr.length];/// this array will be replaced by the output file
+		        float[] medianArray = new float[arr.length];
 			try{
 
 					PrintWriter writer = new PrintWriter("OutputFiles/sampleOutput"+arr.length+".txt", "UTF-8");
@@ -43,7 +44,7 @@ public class ForkJoin extends RecursiveAction
 
 				        if(i < width/2 || (arr.length - i) <= width/2){
 
-				        	writer.println(arr[i]);
+				        	medianArray[i] = arr[i];//writer.println(arr[i]);
 
 				        }
 				   
@@ -56,13 +57,14 @@ public class ForkJoin extends RecursiveAction
 				            }
 
 				            Arrays.sort(field);
-				            writer.println(field[width/2]);
+				            medianArray[i] = (field[width/2]);
 				        }
 				        
 				    }writer.close();
 				}
 			catch(Exception e) { System.out.println("An Error occured while writting.");}
-		}	
+		}
+		static float [] filteredArray(){ return medianArray;}
 
 
 }

@@ -3,6 +3,7 @@
 				-- it performs median filter where the median is writtern in a file stored in the OutputFiles
 					*the file name depends on the inputfile if input_file = sampleInput100.txt
 											               then outputfile = sampleOutput100.txt
+												       
 
 
 ReadFile.java  	--takes in a file of float numbers as parameters and returns an array of the type float

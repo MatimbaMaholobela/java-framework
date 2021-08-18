@@ -1,0 +1,25 @@
+*ForkJoin.java  --It takes an array of type float, boundaries( low and high)
+				-- ForkJoin(float [] arr, int low, int high)
+				-- it performs median filter where the median is writtern in a file stored in the OutputFiles
+					*the file name depends on the inputfile if input_file = sampleInput100.txt
+											               then outputfile = sampleOutput100.txt
+
+
+ReadFile.java  	--takes in a file of float numbers as parameters and returns an array of the type float
+
+ForkJoinRun	   	-- It contains the main method where the ForkJoin is ran.
+
+				***** Enter filename space filter size
+
+					  e.g sampleInput1000.txt 3
+
+				--it is run by "make forkjoin" on the terminal
+
+
+NormalRun 		--contains the main methid where median filter is performed without parallelism.
+
+				***** Enter filename space filter size
+
+					  e.g sampleInput1000.txt 3
+
+				--it is run by "make normal" on the terminal

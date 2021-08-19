@@ -9,7 +9,7 @@ public class ForkJoin extends RecursiveAction
 {
 		static float [] arr; static int width; 
 
-		static final int SEQUENTIAL_CUTOFF = 10000;
+		static final int SEQUENTIAL_CUTOFF = 10000; //sequentu
 
 		 int lo; int hi;
 		 static float[] medianArray;
